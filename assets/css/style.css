@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/*----------------------------------------------------*/
+/*                    General rule                    */
+/*----------------------------------------------------*/
+
+:root {
+    --app-dark-background: #141414;
+    --app-medium-grey: #2d2d2d;
+    --app-yellow: #ffff00;
+    --app-white: #fff;
+    --app-green: #7cfc00;
+    --app-pink: #ff007f;
+    --app-red: #ff3333; 
+    --app-blue: #0000e6;
+    --app-light-grey:#f6f6f6; 
+    --app-bg-dashboard: rgba(128, 128, 128, 0.911);
+    --app-purple: #9a009a;
+}
+
+body {
+    font-family: 'Audiowide', 'Nunito sans', Arial, sans-serif ;
+    text-rendering: geometricPrecision;
+    background-color: var(--app-dark-background);
+    overflow: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden { 
+    visibility: hidden; 
+}
+
+/*----------------------------------------------------*/
+/*                         Main                       */
+/*----------------------------------------------------*/
+
+
+main {
+    overflow: auto;
+    height: 100svh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--app-yellow);
+    margin-top: 20px;
+    text-shadow: 1px 1px var(--app-dark-background);
+}
+
+/*----------------------------------------------------*/
+/*                   Game / Dashboard                 */
+/*----------------------------------------------------*/
+
+.dashboard {
+    width: 500px;
+    height: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(128, 124, 124);
+    border-radius: 5px;
+    background-color: #2d2d2d;
+
+    .result-display {
+        font-size: 30px;
+        color: var(--app-green);
+        text-align: center;
+        padding-top: 10px;
+        width: 400px;
+        height: 70px;
+        background: var(--app-purple);
+        border: 1px solid var(--app-green);
+        border-radius: 5px;
+        font-variant:tabular-nums;
+        margin: 40px;
+    }
+
+    .counter p{
+        font-size: 22px;
+        margin: 30px;
+        text-align: center;
+        color: var(--app-white);
+        font-variant:tabular-nums;
+    }
+
+    .input-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-text {
+        font-size: 150px;
+        color: var(--app-medium-grey);
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        background: var(--app-light-grey);
+        border: 1px solid var(--app-blue);
+        border-radius: 50%;
+        font-variant: tabular-nums;
+        cursor: pointer;
+    }
+
+    .input-text::placeholder { 
+        color: var(--app-medium-grey);
+    }
+
+}
+
+/*----------------------------------------------------*/
+/*                 Play again button               */
+/*----------------------------------------------------*/
+
+.play-again-button { 
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    width: 150px; 
+    height: 50px; 
+    background-color: var(--app-purple); 
+    border: 1px solid var(--app-green);
+    border-radius: 25px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: var(--app-green); 
+    cursor: pointer; 
+    text-align: center; 
+    font-size: 18px; 
+}
+
+.play-again-button:hover {
+    border: 2px solid var(--app-green);
+    transition: all 0.25s ease-in-out; 
+}
